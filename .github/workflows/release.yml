@@ -1,0 +1,13 @@
+name: First GitActions
+on: workflow_dispatch
+jobs:
+    release:
+        runs-on: ubuntu-20.04
+        steps:
+           - name: Checkout source code
+             uses: actions/checkout@v2
+           - name: Install the dependencies
+             run: pip install -r requirements.txt
+           - name: End message
+             run: print 'All done'
+
